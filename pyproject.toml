@@ -39,8 +39,8 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["setuptools", "wheel", "cython==0.29.35", "numpy==1.24.3", "packaging"]
+requires = ["hatchling", "cython", "numpy"]
+build-backend = "hatchling.build"
 
-[tool.setuptools]
+[tool.hatch.build.targets.wheel]
 packages = ["matcha"]
-package-dir = {"matcha" = "matcha"}
